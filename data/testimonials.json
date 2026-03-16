@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Rahul Sharma",
+    "city": "Delhi",
+    "rating": 5,
+    "review": "Trending Aquarium transformed my living room with a beautiful custom aquarium. Their team is professional, prompt, and the water quality has been perfect for 6 months now!",
+    "aquariumSize": "4 feet"
+  },
+  {
+    "id": 2,
+    "name": "Priya Mehta",
+    "city": "Noida",
+    "rating": 5,
+    "review": "I was struggling to maintain my fish tank until I found them. Monthly maintenance plan is very affordable and they always come on time. Highly recommended!",
+    "aquariumSize": "2 feet"
+  },
+  {
+    "id": 3,
+    "name": "Amit Verma",
+    "city": "Delhi",
+    "rating": 5,
+    "review": "Set up a huge 6-foot aquarium for my office. The setup was done in a day and looked absolutely stunning. All my colleagues love it. Great service!",
+    "aquariumSize": "6 feet"
+  },
+  {
+    "id": 4,
+    "name": "Sneha Kapoor",
+    "city": "Noida",
+    "rating": 4,
+    "review": "Very knowledgeable about fish health and water chemistry. They identified a disease in my fish early and treated it quickly. Will continue using their service.",
+    "aquariumSize": "3 feet"
+  },
+  {
+    "id": 5,
+    "name": "Vikram Singh",
+    "city": "Delhi",
+    "rating": 5,
+    "review": "Custom aquarium design for my home was exactly what I imagined. They understood my vision perfectly. The plants and fish combination looks like a dream!",
+    "aquariumSize": "5 feet"
+  }
+]

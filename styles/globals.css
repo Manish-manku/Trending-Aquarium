@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ocean-light:  #caf0f8;
+  --ocean-mid:    #90e0ef;
+  --ocean-base:   #00b4d8;
+  --ocean-deep:   #0077b6;
+  --ocean-dark:   #03045e;
+  --white:        #ffffff;
+  --text-primary: #0c2340;
+  --text-muted:   #4a7fa5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-primary);
+  background: #f8fdff;
+  overflow-x: hidden;
+}
+
+/* ── Scrollbar ─────────────────────────── */
+::-webkit-scrollbar             { width: 6px; }
+::-webkit-scrollbar-track       { background: #e0f2fe; }
+::-webkit-scrollbar-thumb       { background: var(--ocean-base); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ocean-deep); }
+
+/* ── Selection ─────────────────────────── */
+::selection {
+  background: var(--ocean-mid);
+  color: var(--ocean-dark);
+}
+
+/* ── Utility classes ───────────────────── */
+.section-padding { @apply py-20 px-4 sm:px-8 lg:px-16; }
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-base) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(144, 224, 239, 0.35);
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white transition-all duration-300;
+  background: linear-gradient(135deg, var(--ocean-base) 0%, var(--ocean-deep) 100%);
+  box-shadow: 0 4px 20px rgba(0,180,216,0.35);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,180,216,0.50);
+}
+
+.btn-outline {
+  @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold transition-all duration-300;
+  border: 2px solid var(--ocean-base);
+  color: var(--ocean-deep);
+  background: rgba(255,255,255,0.85);
+}
+.btn-outline:hover {
+  background: var(--ocean-base);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,180,216,0.30);
+}
+
+/* ── Section titles ─────────────────────── */
+.section-tag {
+  @apply inline-block text-xs font-semibold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4;
+  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+  color: var(--ocean-deep);
+  border: 1px solid rgba(0,180,216,0.25);
+}
+
+/* ── Canvas cursor fish ─────────────────── */
+#cursor-fish {
+  pointer-events: none;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 9999;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.1s ease;
+}
+
+/* ── Slick carousel ─────────────────────── */
+.slick-dots li button:before { color: var(--ocean-base) !important; }
+.slick-dots li.slick-active button:before { color: var(--ocean-deep) !important; }
+.slick-prev:before, .slick-next:before { color: var(--ocean-base) !important; }
+
+/* ── Lightbox overlay ───────────────────── */
+.PhotoView-Portal { z-index: 9999 !important; }
+
+/* ── Wave divider ───────────────────────── */
+.wave-divider { overflow: hidden; line-height: 0; }
+.wave-divider svg { display: block; width: 100%; }
+
+/* ── Input focus ────────────────────────── */
+.form-input {
+  @apply w-full px-4 py-3 rounded-xl border outline-none transition-all duration-200;
+  border-color: #bae6fd;
+  background: rgba(255,255,255,0.9);
+}
+.form-input:focus {
+  border-color: var(--ocean-base);
+  box-shadow: 0 0 0 3px rgba(0,180,216,0.15);
+}
+
+/* ── Masonry gallery ────────────────────── */
+.masonry-grid {
+  column-count: 3;
+  column-gap: 1rem;
+}
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) { .masonry-grid { column-count: 2; } }
+@media (max-width: 480px) { .masonry-grid { column-count: 1; } }
