@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Fish, Menu, X, Phone } from 'lucide-react'
+import {  Menu, X, Phone } from 'lucide-react'
 import Image from 'next/image'
 
 const navLinks = [
@@ -39,18 +39,13 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
 
           {/* Logo */}
-          <a href="#hero" className="flex items-center gap-2.5 group">
-            <div><Image src="/logo" alt="Trending Aquarium" width={36} height={36} />
-            </div>
-            <div>
-              <span className="font-display font-bold text-lg text-ocean-dark leading-none block">
-                Trending
-              </span>
-              <span className="text-[10px] tracking-widest uppercase text-ocean-base font-semibold">
-                Aquarium
-              </span>
-            </div>
-          </a>
+        <a href="#hero" className="flex items-center group">
+  <img
+    src="/logo.jpeg"
+    alt="Trending Aquarium"
+    className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+  />
+</a>
 
           {/* Desktop links */}
           <ul className="hidden lg:flex items-center gap-1">
