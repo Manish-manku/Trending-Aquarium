@@ -26,6 +26,7 @@ const brands = [
   { name: 'Hikari',     img:'/images/products/product3.jpeg'},
   { name: 'Optimum',    img:'/images/products/product4.jpeg'},
   { name: 'Tetra',      img:'/images/products/product5.jpeg'},
+  { name: 'Sobo',       img:'/images/products/product6.jpeg'},
 ]
 
 export default function ProductsSection() {
@@ -113,7 +114,7 @@ export default function ProductsSection() {
     boxShadow: '0 2px 12px rgba(0,119,182,0.10)',
   }}
 >
-  <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+  <div className="w-24 h-24 mx-auto mb-3 flex items-center justify-center">
     <img
       src={brand.img}
       alt={brand.name}
