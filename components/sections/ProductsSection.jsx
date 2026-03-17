@@ -26,7 +26,7 @@ const brands = [
   { name: 'Hikari',     img:'/images/products/product3.jpeg'},
   { name: 'Optimum',    img:'/images/products/product4.jpeg'},
   { name: 'Tetra',      img:'/images/products/product5.jpeg'},
-  { name: 'Sobo',       img:'/images/products/product6.jpeg'},
+  { name: 'Sobo',       img:'/images/products/product6.png'},
 ]
 
 export default function ProductsSection() {
