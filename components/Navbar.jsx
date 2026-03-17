@@ -40,7 +40,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2.5 group">
-            <div><Image src="/logo.png" alt="Trending Aquarium" width={36} height={36} />
+            <div><Image src="/logo" alt="Trending Aquarium" width={36} height={36} />
             </div>
             <div>
               <span className="font-display font-bold text-lg text-ocean-dark leading-none block">
