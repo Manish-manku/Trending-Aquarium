@@ -21,11 +21,11 @@ const plants = [
 ]
 
 const brands = [
-  { name: 'Minjiang',   img:'/public/images/products/product1.jpeg'},
-  { name: 'Sera',       img:'/public/images/products/product2.jpeg'},
-  { name: 'Hikari',     img:'/public/images/products/product3.jpeg'},
-  { name: 'Optimum',    img:'/public/images/products/product4.jpeg'},
-  { name: 'Tetra',      img:'/public/images/products/product5.jpeg'},
+  { name: 'Minjiang',   img:'/images/products/product1.jpeg'},
+  { name: 'Sera',       img:'/images/products/product2.jpeg'},
+  { name: 'Hikari',     img:'/images/products/product3.jpeg'},
+  { name: 'Optimum',    img:'/images/products/product4.jpeg'},
+  { name: 'Tetra',      img:'/images/products/product5.jpeg'},
 ]
 
 export default function ProductsSection() {
