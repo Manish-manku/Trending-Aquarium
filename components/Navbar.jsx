@@ -85,14 +85,19 @@ const toggleTheme = () => {
           <div className="hidden lg:flex items-center gap-3">
             {/* Theme toggle */}
   <button
-    onClick={toggleTheme}
-    className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ${
-      scrolled
-        ? 'bg-aqua-100 text-ocean-deep hover:bg-aqua-200'
-        : 'bg-white/15 text-white hover:bg-white/25'
-    }`}>
-    {isDark ? <Sun size={16} /> : <Moon size={16} />}</button>
-
+  onClick={toggleTheme}
+  className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 border ${
+    scrolled
+      ? 'bg-aqua-50 border-aqua-200 text-ocean-deep hover:bg-aqua-100 dark:bg-[#1e3a5f] dark:border-[#2a4f7f] dark:text-aqua-300'
+      : 'bg-white/20 border-white/30 text-white hover:bg-white/30'
+  }`}
+  title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+>
+  {isDark
+    ? <Sun size={17} strokeWidth={2} />
+    : <Moon size={17} strokeWidth={2} />
+  }
+</button>
             <a
               href={`tel:+${whatsapp}`}
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${

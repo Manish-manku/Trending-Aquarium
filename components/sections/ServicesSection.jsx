@@ -48,7 +48,7 @@ const cardVariants = {
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="section-padding bg-white dark:bg-[#0d1526] relative overflow-hidden">
+    <section id="services" className="section-padding relative overflow-hidden" style={{ background: 'var(--bg-primary)' }}>
       {/* Decorative blobs */}
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-5 dark:opacity-10"
        style={{ background: 'radial-gradient(circle, #00b4d8, transparent)', transform: 'translate(40%, -40%)' }} />
@@ -85,12 +85,12 @@ export default function ServicesSection() {
                 viewport={{ once: true, margin: '-60px' }}
                 variants={cardVariants}
                 whileHover={{ y: -6, boxShadow: '0 12px 40px rgba(0,119,182,0.18)' }}
-               className="relative rounded-2xl p-7 cursor-pointer transition-all duration-300 group dark:bg-[#111827] dark:border-[#1e3a5f]"
-                style={{
-                 background: 'rgba(255,255,255,0.9)',
-                 border: '1px solid #e0f2fe',
-                  boxShadow: '0 2px 16px rgba(0,119,182,0.07)',
-                }}
+              className="relative rounded-2xl p-7 cursor-pointer transition-all duration-300 group"
+style={{
+  background: 'var(--bg-card)',
+  border: '1px solid var(--border-color)',
+  boxShadow: '0 2px 16px rgba(0,119,182,0.07)',
+}}
               >
                 {/* Icon */}
                 <div

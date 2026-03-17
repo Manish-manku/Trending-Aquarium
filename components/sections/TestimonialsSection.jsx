@@ -60,11 +60,11 @@ export default function TestimonialsSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -4 }}
-                  className="rounded-2xl p-6 h-full transition-all duration-300 dark:bg-[#111827] dark:border-[#1e3a5f]"
+                  className="rounded-2xl p-6 h-full transition-all duration-300"
 style={{
-  background: 'rgba(255,255,255,0.85)',
+  background: 'var(--bg-card)',
   backdropFilter: 'blur(10px)',
-  border: '1px solid rgba(144,224,239,0.4)',
+  border: '1px solid var(--border-color)',
   boxShadow: '0 2px 20px rgba(0,119,182,0.08)',
   minHeight: '200px',
 }}

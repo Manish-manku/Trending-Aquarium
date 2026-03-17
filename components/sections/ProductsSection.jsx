@@ -31,7 +31,7 @@ const brands = [
 
 export default function ProductsSection() {
   return (
-    <section id="products" className="section-padding bg-white dark:bg-[#0a0f1e]">
+    <section id="products" className="section-padding" style={{ background: 'var(--bg-primary)' }}>
       <div className="max-w-7xl mx-auto">
 
         {/* ── Fish Types ──────────────────────── */}
@@ -54,11 +54,11 @@ export default function ProductsSection() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.07 }}
               whileHover={{ y: -5 }}
-              className="rounded-2xl p-5 text-center cursor-default transition-all duration-300 dark:bg-[#111827] dark:border-[#1e3a5f]"
+             className="rounded-2xl p-5 text-center cursor-default transition-all duration-300"
 style={{
-  background: `${fish.color}12`,
-  border: `1px solid ${fish.color}35`,
-  boxShadow: `0 2px 12px ${fish.color}15`,
+  background: 'var(--bg-card)',
+  border: '1px solid var(--border-color)',
+  boxShadow: '0 2px 12px rgba(0,119,182,0.07)',
 }}
             >
               <div className="text-3xl mb-2">{fish.emoji}</div>
@@ -105,10 +105,10 @@ style={{ background: '#e0f2fe', border: '1px solid #bae6fd' }} >
   viewport={{ once: true }}
   transition={{ delay: i * 0.08 }}
   whileHover={{ y: -4, boxShadow: '0 8px 24px rgba(0,119,182,0.20)' }}
-  className="rounded-2xl p-5 text-center transition-all duration-300 dark:bg-[#111827] dark:border-[#1e3a5f]"
+  className="rounded-2xl p-5 text-center transition-all duration-300"
 style={{
-  background: 'rgba(255,255,255,0.95)',
-  border: '1.5px solid #bae6fd',
+  background: 'var(--bg-card)',
+  border: '1.5px solid var(--border-color)',
   boxShadow: '0 2px 12px rgba(0,119,182,0.10)',
 }}
 >

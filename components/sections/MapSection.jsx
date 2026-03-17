@@ -69,11 +69,11 @@ export default function MapSection() {
              <div
   key={area.city}
   className="rounded-2xl p-6 dark:bg-[#111827] dark:border-[#1e3a5f]"
-  style={{
-    background: 'rgba(255,255,255,0.9)',
-    border: '1px solid #bae6fd',
-    boxShadow: '0 2px 16px rgba(0,119,182,0.07)',
-  }}
+ style={{
+  background: 'var(--bg-card)',
+  border: '1px solid var(--border-color)',
+  boxShadow: '0 2px 16px rgba(0,119,182,0.07)',
+}}
 >
               
                 <div className="flex items-center gap-3 mb-3">

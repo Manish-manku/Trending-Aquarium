@@ -43,7 +43,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="section-padding bg-white dark:bg-[#0a0f1e] relative overflow-hidden">
+    <section id="contact" className="section-padding relative overflow-hidden" style={{ background: 'var(--bg-primary)' }}>
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 right-0 w-72 h-72 rounded-full opacity-5"
@@ -97,7 +97,7 @@ export default function ContactSection() {
             </a>
 
             <div className="flex items-center gap-5 p-6 rounded-2xl dark:bg-[#111827] dark:border-[#1e3a5f]"
-  style={{ background: '#f0f9ff', border: '1px solid #bae6fd' }}>
+  style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
   <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
     style={{ background: 'linear-gradient(135deg, #0ea5e9, #0077b6)' }}>
     <Phone size={24} color="white" />
@@ -110,7 +110,7 @@ export default function ContactSection() {
 </div>
 
             <div className="flex items-center gap-5 p-6 rounded-2xl dark:bg-[#111827] dark:border-[#1e3a5f]"
-  style={{ background: '#f0f9ff', border: '1px solid #bae6fd' }}>
+  style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
   <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
     style={{ background: 'linear-gradient(135deg, #0ea5e9, #0077b6)' }}>
     <MapPin size={24} color="white" />
@@ -122,7 +122,7 @@ export default function ContactSection() {
   </div>
 </div>
            <div className="flex items-center gap-5 p-6 rounded-2xl dark:bg-[#111827] dark:border-[#1e3a5f]"
-  style={{ background: '#f0f9ff', border: '1px solid #bae6fd' }}>
+  style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)' }}>
   <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
     style={{ background: 'linear-gradient(135deg, #0ea5e9, #0077b6)' }}>
     <Mail size={24} color="white" />
@@ -145,11 +145,11 @@ export default function ContactSection() {
   onSubmit={handleSubmit}
   className="rounded-3xl p-8 dark:bg-[#111827] dark:border-[#1e3a5f]"
   style={{
-    background: 'rgba(255,255,255,0.9)',
-    backdropFilter: 'blur(12px)',
-    border: '1px solid #bae6fd',
-    boxShadow: '0 4px 32px rgba(0,119,182,0.10)',
-  }}
+  background: 'var(--bg-card)',
+  backdropFilter: 'blur(12px)',
+  border: '1px solid var(--border-color)',
+  boxShadow: '0 4px 32px rgba(0,119,182,0.10)',
+}}
 >
              <h3 className="font-display font-bold text-2xl text-ocean-dark dark:text-aqua-100 mb-6 flex items-center gap-2">
   <Mail size={22} className="text-ocean-base dark:text-aqua-300" />
