@@ -118,7 +118,7 @@ export default function ProductsSection() {
     <img
       src={brand.img}
       alt={brand.name}
-      className="max-w-full max-h-full object-contain"
+      className="w-full h-full object-contain scale-125"
     />
   </div>
   <div className="font-bold text-ocean-dark text-sm">{brand.name}</div>
