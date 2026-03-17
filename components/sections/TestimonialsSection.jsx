@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
             What People <span className="gradient-text">Say</span>
           </h2>
           <p className="text-ocean-base/70 max-w-md mx-auto">
-            Real reviews from our happy customers in Delhi &amp; Noida.
+            Real reviews from our happy customers in Delhi &amp; gurgaon.
           </p>
         </div>
 
