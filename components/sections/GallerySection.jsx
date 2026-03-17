@@ -75,8 +75,10 @@ export default function GallerySection() {
             ))}
           </div>
         </PhotoProvider>
-
+            <div>
+      
        
+        </div>
         </div>
       </div>
     </section>
