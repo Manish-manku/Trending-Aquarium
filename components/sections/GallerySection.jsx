@@ -76,10 +76,7 @@ export default function GallerySection() {
           </div>
         </PhotoProvider>
 
-        <div className="text-center mt-10">
-          <p className="text-sm text-ocean-base/60 italic">
-            📷 Replace placeholder images with your real aquarium photos in <code className="bg-aqua-100 px-1.5 py-0.5 rounded text-ocean-deep">/public/images/gallery/</code>
-          </p>
+       
         </div>
       </div>
     </section>
