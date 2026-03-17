@@ -114,7 +114,7 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-3">
                 <Mail size={15} className="text-aqua-300 mt-0.5 flex-shrink-0" />
-                <div className="text-white/80 text-sm break-all">info@trendingaquarium.in</div>
+                <div className="text-white/80 text-sm break-all">kamalrajoriya25@gmail.com</div>
               </div>
               <div className="flex items-start gap-3">
                 <MapPin size={15} className="text-aqua-300 mt-0.5 flex-shrink-0" />
