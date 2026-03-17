@@ -130,7 +130,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <div className="font-semibold text-ocean-dark">Email</div>
-                <div className="text-ocean-base text-sm mt-0.5">info@trendingaquarium.in</div>
+                <div className="text-ocean-base text-sm mt-0.5">kamalrajoriya25@gmail.com</div>
                 <div className="text-ocean-base/55 text-xs mt-1">We reply within 24 hours</div>
               </div>
             </div>

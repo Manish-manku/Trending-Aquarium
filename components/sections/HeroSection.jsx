@@ -149,9 +149,11 @@ function useAquariumCanvas(canvasRef) {
 }
 
 
+
 export default function HeroSection() {
   const canvasRef = useRef(null)
   useAquariumCanvas(canvasRef)
+  
 
   return (
     <section
@@ -271,6 +273,7 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
+    
 
       {/* Scroll indicator */}
       <motion.div
