@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Trending Aquarium — Professional Aquarium Services in Delhi & Noida</title>
+        <title>Trending Aquarium — Professional Aquarium Services in Delhi & gurgaon</title>
       </Head>
 
       <Navbar />

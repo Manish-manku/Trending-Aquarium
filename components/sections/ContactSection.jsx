@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react'
 import toast from 'react-hot-toast'
 
-const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919999999999'
-const WA_MSG   = encodeURIComponent('Hello, I saw your website and I want aquarium maintenance service.')
+const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+919354011835'
+const WA_MSG   = encodeURIComponent('Hello, I saw your website and I want to know more about your aquarium products and services.')
 
-const cities = ['Delhi', 'Noida', 'Other']
+const cities = ['Delhi', 'gurgaon', 'Other']
 const sizes  = ['1 foot', '2 feet', '3 feet', '4 feet', '5 feet', '6+ feet', 'Not sure']
 
 export default function ContactSection() {
@@ -104,7 +104,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <div className="font-semibold text-ocean-dark">Phone</div>
-                <div className="text-ocean-base text-sm mt-0.5">+91-99999-99999</div>
+                <div className="text-ocean-base text-sm mt-0.5">+91 93540 11835</div>
                 <div className="text-ocean-base/55 text-xs mt-1">Mon – Sat · 9 AM – 7 PM</div>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function ContactSection() {
               </div>
               <div>
                 <div className="font-semibold text-ocean-dark">Service Areas</div>
-                <div className="text-ocean-base text-sm mt-0.5">Delhi &amp; Noida</div>
+                <div className="text-ocean-base text-sm mt-0.5">Delhi &amp; gurgaon</div>
                 <div className="text-ocean-base/55 text-xs mt-1">Home visits available across both cities</div>
               </div>
             </div>

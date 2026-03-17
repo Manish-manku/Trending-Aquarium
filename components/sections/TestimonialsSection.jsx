@@ -110,11 +110,6 @@ export default function TestimonialsSection() {
             </button>
           </div>
         </div>
-
-        {/* Edit note */}
-        <p className="text-center text-xs text-ocean-base/45 mt-6 italic">
-          ✏️ Edit testimonials in <code className="bg-white px-1 py-0.5 rounded">/data/testimonials.json</code>
-        </p>
       </div>
     </section>
   )

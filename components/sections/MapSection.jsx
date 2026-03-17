@@ -8,7 +8,7 @@ const MAPS_EMBED_URL =
 
 const serviceAreas = [
   { city: 'Delhi', areas: 'South Delhi, West Delhi, North Delhi, East Delhi, Central Delhi', icon: '🏙️' },
-  { city: 'Noida', areas: 'Sector 18, 62, 63, 137, Greater Noida, Noida Extension',          icon: '🌆' },
+  { city: 'gurgaon', areas: 'DLF City, MG Road,New Gurgaon, Sohna Road, Sector 49.',          icon: '🌆' },
 ]
 
 export default function MapSection() {
@@ -23,7 +23,7 @@ export default function MapSection() {
             Our <span className="gradient-text">Service Areas</span>
           </h2>
           <p className="text-ocean-base/70 max-w-lg mx-auto">
-            We provide aquarium services across Delhi &amp; Noida. Home visits and on-site maintenance available.
+            We provide aquarium services across Delhi &amp; gurgaon. Home visits and on-site maintenance available.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export default function MapSection() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Trending Aquarium Service Areas — Delhi & Noida"
+              title="Trending Aquarium Service Areas — Delhi & gurgaon"
             />
           </motion.div>
 
@@ -111,14 +111,11 @@ export default function MapSection() {
               </div>
               <div className="mt-5 pt-4 border-t border-white/20 flex items-center gap-2">
                 <Phone size={14} color="white" />
-                <span className="text-white text-sm font-medium">+91-99999-99999</span>
+                <span className="text-white text-sm font-medium">+91-93540-11835</span>
               </div>
             </div>
 
-            {/* SEO tip note */}
-            <p className="text-xs text-ocean-base/40 italic leading-relaxed">
-              📍 Replace the map embed URL in <code className="bg-white px-1 rounded">MapSection.jsx</code> with your actual Google Maps business link for best local SEO.
-            </p>
+            
           </motion.div>
         </div>
       </div>

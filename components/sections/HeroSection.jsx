@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
-const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919999999999'
-const WA_MSG = encodeURIComponent('Hello, I saw your website and I want aquarium maintenance service.')
+const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+919354011835'
+const WA_MSG = encodeURIComponent('Hello, I saw your website and I want to know more about your aquarium services.')
 
 /* ── Aquarium canvas animation ─────────────── */
 function useAquariumCanvas(canvasRef) {
@@ -226,7 +226,7 @@ export default function HeroSection() {
           <span className="inline-block px-4 py-1.5 rounded-full text-xs tracking-widest uppercase font-semibold mb-6"
             style={{ background: 'rgba(255,255,255,0.18)', border: '1px solid rgba(255,255,255,0.30)' }}
           >
-            🐠 Serving Delhi &amp; Noida
+            🐠 Serving Delhi &amp; gurgaon
           </span>
         </motion.div>
 
@@ -284,8 +284,8 @@ export default function HeroSection() {
         >
           {[
             { num: '500+', label: 'Aquariums Serviced' },
-            { num: '5★',  label: 'Customer Rating' },
-            { num: '3+',  label: 'Years Experience' },
+            { num: '4.2★',  label: 'Customer Rating' },
+            { num: '8+',  label: 'Years Experience' },
             { num: '2',   label: 'Cities Covered' },
           ].map(s => (
             <div key={s.label} className="text-center">

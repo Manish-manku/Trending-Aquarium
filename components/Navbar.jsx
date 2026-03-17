@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Fish, Menu, X, Phone } from 'lucide-react'
+import Image from 'next/image'
 
 const navLinks = [
   { label: 'Home',      href: '#hero' },
@@ -15,7 +16,7 @@ export default function Navbar() {
   const [scrolled,  setScrolled]  = useState(false)
   const [menuOpen,  setMenuOpen]  = useState(false)
   const [activeSection, setActive] = useState('hero')
-  const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919999999999'
+  const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+919354011835'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -39,8 +40,7 @@ export default function Navbar() {
 
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-ocean-base to-ocean-deep flex items-center justify-center shadow-aqua-sm group-hover:scale-110 transition-transform">
-              <Fish size={20} color="white" />
+            <div><Image src="/logo.png" alt="Trending Aquarium" width={36} height={36} />
             </div>
             <div>
               <span className="font-display font-bold text-lg text-ocean-dark leading-none block">
@@ -82,7 +82,7 @@ export default function Navbar() {
               Call Us
             </a>
             <a
-              href={`https://wa.me/${whatsapp}?text=Hello%2C%20I%20saw%20your%20website%20and%20I%20want%20aquarium%20maintenance%20service.`}
+              href={`https://wa.me/${whatsapp}?text=Hello%2C%20I%20saw%20your%20website%20and%20I%20want%20to%20know%20more%20about%20your%20aquarium%20products%20and%20services.`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm py-2.5 px-5"
@@ -127,7 +127,7 @@ export default function Navbar() {
               ))}
             </ul>
             <a
-              href={`https://wa.me/${whatsapp}?text=Hello%2C%20I%20saw%20your%20website%20and%20I%20want%20aquarium%20maintenance%20service.`}
+              href={`https://wa.me/${whatsapp}?text=Hello%2C%20I%20saw%20your%20website%20and%20I%20want%20to%20know%20more%20about%20your%20aquarium%20products%20and%20services.`}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary w-full justify-center text-sm"

@@ -21,12 +21,11 @@ const plants = [
 ]
 
 const brands = [
-  { name: 'Tetra',   logo: '🔵', desc: 'Fish food & water care' },
-  { name: 'Hikari',  logo: '🟠', desc: 'Premium fish nutrition' },
-  { name: 'API',     logo: '🟢', desc: 'Water testing & treatment' },
-  { name: 'Boyu',    logo: '🔴', desc: 'Aquarium equipment' },
-  { name: 'Fluval',  logo: '🟡', desc: 'Filters & accessories' },
-  { name: 'Eheim',   logo: '🟣', desc: 'Filtration systems' },
+  { name: 'Minjiang',   img:'/public/images/products/product1.jpeg'},
+  { name: 'Sera',       img:'/public/images/products/product2.jpeg'},
+  { name: 'Hikari',     img:'/public/images/products/product3.jpeg'},
+  { name: 'Optimum',    img:'/public/images/products/product4.jpeg'},
+  { name: 'Tetra',      img:'/public/images/products/product5.jpeg'},
 ]
 
 export default function ProductsSection() {
@@ -71,7 +70,7 @@ export default function ProductsSection() {
         {/* ── Plants ──────────────────────────── */}
         <div className="mb-16">
           <h3 className="font-display font-semibold text-2xl text-ocean-dark mb-6 text-center">
-            🌿 Aquarium Plants
+            🌿 Aquarium Plants &amp; Decoratives
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {plants.map((plant, i) => (
@@ -101,18 +100,28 @@ export default function ProductsSection() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {brands.map((brand, i) => (
               <motion.div
-                key={brand.name}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                whileHover={{ y: -4, boxShadow: '0 8px 24px rgba(0,119,182,0.15)' }}
-                className="rounded-2xl p-5 text-center glass-card transition-all duration-300"
-              >
-                <div className="text-3xl mb-2">{brand.logo}</div>
-                <div className="font-bold text-ocean-dark text-sm">{brand.name}</div>
-                <div className="text-xs text-ocean-base/55 mt-1 leading-snug">{brand.desc}</div>
-              </motion.div>
+  key={brand.name}
+  initial={{ opacity: 0, y: 15 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ delay: i * 0.08 }}
+  whileHover={{ y: -4, boxShadow: '0 8px 24px rgba(0,119,182,0.20)' }}
+  className="rounded-2xl p-5 text-center transition-all duration-300"
+  style={{
+    background: 'rgba(255,255,255,0.95)',
+    border: '1.5px solid #bae6fd',
+    boxShadow: '0 2px 12px rgba(0,119,182,0.10)',
+  }}
+>
+  <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+    <img
+      src={brand.img}
+      alt={brand.name}
+      className="max-w-full max-h-full object-contain"
+    />
+  </div>
+  <div className="font-bold text-ocean-dark text-sm">{brand.name}</div>
+</motion.div>
             ))}
           </div>
         </div>

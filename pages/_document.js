@@ -6,22 +6,22 @@ export default function Document() {
       <Head>
         {/* ── Primary Meta ── */}
         <meta charSet="UTF-8" />
-        <meta name="description" content="Trending Aquarium — Professional aquarium maintenance, cleaning, setup & custom design services in Delhi & Noida. Monthly plans starting at affordable prices." />
-        <meta name="keywords"    content="aquarium maintenance Delhi, aquarium cleaning Noida, fish tank setup Delhi, custom aquarium design, aquarium service near me" />
+        <meta name="description" content="Trending Aquarium — Professional aquarium maintenance, cleaning, setup & custom design services in Delhi & gurgaon. Monthly plans starting at affordable prices." />
+        <meta name="keywords"    content="aquarium maintenance Delhi, aquarium cleaning gurgaon, fish tank setup Delhi, custom aquarium design, aquarium service near me" />
         <meta name="author"      content="Trending Aquarium" />
         <meta name="robots"      content="index, follow" />
 
         {/* ── Open Graph ── */}
         <meta property="og:type"        content="website" />
-        <meta property="og:url"         content="https://trendingaquarium.in" />
-        <meta property="og:title"       content="Trending Aquarium — Professional Aquarium Services in Delhi & Noida" />
-        <meta property="og:description" content="Expert aquarium maintenance, setup & custom design. Serving Delhi & Noida." />
+        <meta property="og:url"         content="https://trendingaquarium.com" />
+        <meta property="og:title"       content="Trending Aquarium — Professional Aquarium Services in Delhi & gurgaon" />
+        <meta property="og:description" content="Expert aquarium maintenance, setup & custom design. Serving Delhi & gurgaon." />
         <meta property="og:image"       content="/og-image.jpg" />
 
         {/* ── Twitter Card ── */}
         <meta name="twitter:card"        content="summary_large_image" />
         <meta name="twitter:title"       content="Trending Aquarium" />
-        <meta name="twitter:description" content="Professional aquarium services in Delhi & Noida." />
+        <meta name="twitter:description" content="Professional aquarium services in Delhi & gurgaon." />
 
         {/* ── Fonts ── */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,9 +40,9 @@ export default function Document() {
               "@type": "LocalBusiness",
               "name": "Trending Aquarium",
               "description": "Professional aquarium maintenance, cleaning, setup and custom design services",
-              "url": "https://trendingaquarium.in",
-              "telephone": "+91-99999-99999",
-              "areaServed": ["Delhi", "Noida"],
+              "url": "https://trendingaquarium.com",
+              "telephone": "+91 93540 11835",
+              "areaServed": ["Delhi", "gurgaon"],
               "serviceType": "Aquarium Maintenance",
               "priceRange": "₹₹",
               "openingHours": "Mo-Sa 09:00-19:00",

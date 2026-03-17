@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import Image from 'next/image'
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
 
@@ -7,15 +6,15 @@ import 'react-photo-view/dist/react-photo-view.css'
 // Real images: put JPG/PNG files in /public/images/gallery/
 // and update this array with actual filenames.
 const galleryImages = [
-  { src: 'https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=600&q=80', alt: 'Beautiful planted aquarium', height: 280 },
-  { src: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?w=600&q=80', alt: 'Colourful tropical fish tank', height: 200 },
-  { src: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80', alt: 'Marine reef aquarium', height: 320 },
-  { src: 'https://images.unsplash.com/photo-1497206365907-f5e630693df0?w=600&q=80', alt: 'Freshwater community tank', height: 220 },
-  { src: 'https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?w=600&q=80', alt: 'Custom aquarium setup', height: 260 },
-  { src: 'https://images.unsplash.com/photo-1601581875309-fafbf2d3ed3a?w=600&q=80', alt: 'Office aquarium installation', height: 300 },
-  { src: 'https://images.unsplash.com/photo-1516715094483-75da7dee9758?w=600&q=80', alt: 'Planted tank with driftwood', height: 240 },
-  { src: 'https://images.unsplash.com/photo-1559628376-f3fe5f782a2e?w=600&q=80', alt: 'Large custom aquarium', height: 200 },
-  { src: 'https://images.unsplash.com/photo-1570483762892-8a4e33d4bcae?w=600&q=80', alt: 'Aquarium maintenance', height: 280 },
+  { src: '/images/aquarium/aquarium1.jpeg', alt: 'Aquarium setup Delhi' },
+  { src: '/images/aquarium/aquarium2.jpeg', alt: 'Custom aquarium Noida' },
+  { src: '/images/fish/fish1.jpeg', alt: 'Colorful tropical fish' },
+  { src: '/images/aquarium/aquarium4.jpeg', alt: 'Fish tank maintenance' },
+  { src: '/images/fish/fish6.jpeg', alt: 'Exotic freshwater fish' },
+  { src: '/images/aquarium/aquarium6.jpeg', alt: 'Office aquarium setup' },
+  { src: '/images/fish/fish2.jpeg', alt: 'Flowerhorn cichlid' },
+  { src: '/images/fish/fish8.jpeg', alt: 'Oscar' },
+  { src: '/images/fish/fish7.jpeg', alt: 'Bule peacock cichlid' },
 ]
 
 export default function GallerySection() {
@@ -29,7 +28,7 @@ export default function GallerySection() {
             Portfolio <span className="gradient-text">Gallery</span>
           </h2>
           <p className="text-ocean-base/70 max-w-lg mx-auto">
-            Real aquariums we have set up and maintain for homes and offices across Delhi &amp; Noida.
+            Real aquariums we have set up and maintain for homes and offices across Delhi &amp; gurgaon.
           </p>
         </div>
 
@@ -51,18 +50,17 @@ export default function GallerySection() {
               >
                 <PhotoView src={img.src}>
                   <div
-                    className="relative overflow-hidden rounded-2xl cursor-zoom-in group"
-                    style={{ height: img.height }}
-                  >
-                    <img
-                      src={img.src}
-                      alt={img.alt}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-108"
-                      style={{ transition: 'transform 0.5s ease' }}
-                      onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.08)'}
-                      onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
-                    />
+  className="relative overflow-hidden rounded-2xl cursor-zoom-in group"
+>
+  <img
+    src={img.src}
+    alt={img.alt}
+    loading="lazy"
+    className="w-full h-auto block transition-transform duration-500"
+    style={{ transition: 'transform 0.5s ease' }}
+    onMouseEnter={e => e.currentTarget.style.transform = 'scale(1.08)'}
+    onMouseLeave={e => e.currentTarget.style.transform = 'scale(1)'}
+  />
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-ocean-dark/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                       <p className="text-white text-sm font-medium">{img.alt}</p>

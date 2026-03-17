@@ -1,6 +1,6 @@
 import { Fish, Mail, Phone, MapPin, Heart } from 'lucide-react'
 
-const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919999999999'
+const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+919354011835'
 const WA_MSG   = encodeURIComponent('Hello, I want to enquire about aquarium services.')
 
 const navLinks = [
@@ -57,7 +57,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-5">
-              Professional aquarium maintenance, setup &amp; custom design services across Delhi &amp; Noida.
+              Professional aquarium maintenance, setup &amp; custom design services across Delhi &amp; gurgaon.
             </p>
             <a
               href={`https://wa.me/${WHATSAPP}?text=${WA_MSG}`}
@@ -108,7 +108,7 @@ export default function Footer() {
               <div className="flex items-start gap-3">
                 <Phone size={15} className="text-aqua-300 mt-0.5 flex-shrink-0" />
                 <div>
-                  <div className="text-white/80 text-sm">+91-99999-99999</div>
+                  <div className="text-white/80 text-sm">+91 93540 11835</div>
                   <div className="text-white/40 text-xs">Mon–Sat, 9AM–7PM</div>
                 </div>
               </div>
@@ -118,7 +118,7 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-3">
                 <MapPin size={15} className="text-aqua-300 mt-0.5 flex-shrink-0" />
-                <div className="text-white/80 text-sm">Delhi &amp; Noida, India</div>
+                <div className="text-white/80 text-sm">Delhi &amp; gurgaon, India</div>
               </div>
             </div>
           </div>

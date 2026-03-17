@@ -92,16 +92,6 @@ body {
   border: 1px solid rgba(0,180,216,0.25);
 }
 
-/* ── Canvas cursor fish ─────────────────── */
-#cursor-fish {
-  pointer-events: none;
-  position: fixed;
-  top: 0; left: 0;
-  z-index: 9999;
-  width: 40px;
-  height: 40px;
-  transition: transform 0.1s ease;
-}
 
 /* ── Slick carousel ─────────────────────── */
 .slick-dots li button:before { color: var(--ocean-base) !important; }
