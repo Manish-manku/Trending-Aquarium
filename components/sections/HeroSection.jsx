@@ -148,35 +148,10 @@ function useAquariumCanvas(canvasRef) {
   }, [canvasRef])
 }
 
-/* ── Cursor fish ───────────────────────────── */
-function useCursorFish() {
-  useEffect(() => {
-    const el = document.getElementById('cursor-fish-div')
-    if (!el) return
-    let mx = window.innerWidth / 2, my = window.innerHeight / 2
-    let cx = mx, cy = my, lastX = mx
-
-    const onMove = (e) => { mx = e.clientX; my = e.clientY }
-    window.addEventListener('mousemove', onMove)
-
-    let raf
-    const tick = () => {
-      cx += (mx - cx) * 0.08
-      cy += (my - cy) * 0.08
-      const flipped = mx < lastX
-      el.style.transform = `translate(${cx - 20}px, ${cy - 14}px) scaleX(${flipped ? -1 : 1})`
-      lastX = cx
-      raf = requestAnimationFrame(tick)
-    }
-    tick()
-    return () => { cancelAnimationFrame(raf); window.removeEventListener('mousemove', onMove) }
-  }, [])
-}
 
 export default function HeroSection() {
   const canvasRef = useRef(null)
   useAquariumCanvas(canvasRef)
-  useCursorFish()
 
   return (
     <section
@@ -296,18 +271,6 @@ export default function HeroSection() {
         </motion.div>
       </div>
 
-      {/* Cursor fish SVG */}
-      <div
-        id="cursor-fish-div"
-        className="hidden lg:block pointer-events-none fixed top-0 left-0 z-50"
-        style={{ willChange: 'transform' }}
-      >
-        <svg width="40" height="28" viewBox="0 0 40 28" fill="none">
-          <ellipse cx="22" cy="14" rx="14" ry="8" fill="#ade8f4" fillOpacity="0.85"/>
-          <polygon points="4,14 12,7 12,21" fill="#90e0ef" fillOpacity="0.8"/>
-          <circle cx="32" cy="11" r="2.5" fill="#0c2340" fillOpacity="0.7"/>
-        </svg>
-      </div>
 
       {/* Scroll indicator */}
       <motion.div
