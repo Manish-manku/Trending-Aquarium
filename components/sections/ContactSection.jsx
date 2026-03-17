@@ -43,7 +43,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="section-padding bg-white relative overflow-hidden">
+    <section id="contact" className="section-padding bg-white dark:bg-[#0a0f1e] relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 right-0 w-72 h-72 rounded-full opacity-5"
@@ -55,13 +55,13 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="section-tag">Get In Touch</span>
-          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ocean-dark mb-4">
-            Contact <span className="gradient-text">Us</span>
-          </h2>
-          <p className="text-ocean-base/70 max-w-lg mx-auto">
-            Have a question or ready to get started? Reach us on WhatsApp for quick replies or fill the form below.
-          </p>
+          <span className="section-tag dark:bg-[#1e3a5f] dark:text-aqua-300 dark:border-[#1e3a5f]">Get In Touch</span>
+          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ocean-dark dark:text-aqua-100 mb-4">
+  Contact <span className="gradient-text">Us</span>
+</h2>
+        <p className="text-ocean-base/70 dark:text-aqua-300/80 max-w-lg mx-auto">
+  Have a question or ready to get started? Reach us on WhatsApp for quick replies or fill the form below.
+</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -96,44 +96,43 @@ export default function ContactSection() {
               </div>
             </a>
 
-            <div className="flex items-center gap-5 p-6 rounded-2xl"
-              style={{ background: '#f0f9ff', border: '1px solid #bae6fd' }}>
-              <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
-                style={{ background: 'linear-gradient(135deg, #0ea5e9, #0077b6)' }}>
-                <Phone size={24} color="white" />
-              </div>
-              <div>
-                <div className="font-semibold text-ocean-dark">Phone</div>
-                <div className="text-ocean-base text-sm mt-0.5">+91 93540 11835</div>
-                <div className="text-ocean-base/55 text-xs mt-1">Mon – Sat · 9 AM – 7 PM</div>
-              </div>
-            </div>
+            <div className="flex items-center gap-5 p-6 rounded-2xl dark:bg-[#111827] dark:border-[#1e3a5f]"
+  style={{ background: '#f0f9ff', border: '1px solid #bae6fd' }}>
+  <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
+    style={{ background: 'linear-gradient(135deg, #0ea5e9, #0077b6)' }}>
+    <Phone size={24} color="white" />
+  </div>
+  <div>
+    <div className="font-semibold text-ocean-dark dark:text-aqua-100">Phone</div>
+    <div className="text-ocean-base dark:text-aqua-300 text-sm mt-0.5">+91-99999-99999</div>
+    <div className="text-ocean-base/55 dark:text-aqua-300/55 text-xs mt-1">Mon – Sat · 9 AM – 7 PM</div>
+  </div>
+</div>
 
-            <div className="flex items-center gap-5 p-6 rounded-2xl"
-              style={{ background: '#f0f9ff', border: '1px solid #bae6fd' }}>
-              <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
-                style={{ background: 'linear-gradient(135deg, #0ea5e9, #0077b6)' }}>
-                <MapPin size={24} color="white" />
-              </div>
-              <div>
-                <div className="font-semibold text-ocean-dark">Service Areas</div>
-                <div className="text-ocean-base text-sm mt-0.5">Delhi &amp; gurgaon</div>
-                <div className="text-ocean-base/55 text-xs mt-1">Home visits available across both cities</div>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-5 p-6 rounded-2xl"
-              style={{ background: '#f0f9ff', border: '1px solid #bae6fd' }}>
-              <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
-                style={{ background: 'linear-gradient(135deg, #0ea5e9, #0077b6)' }}>
-                <Mail size={24} color="white" />
-              </div>
-              <div>
-                <div className="font-semibold text-ocean-dark">Email</div>
-                <div className="text-ocean-base text-sm mt-0.5">kamalrajoriya25@gmail.com</div>
-                <div className="text-ocean-base/55 text-xs mt-1">We reply within 24 hours</div>
-              </div>
-            </div>
+            <div className="flex items-center gap-5 p-6 rounded-2xl dark:bg-[#111827] dark:border-[#1e3a5f]"
+  style={{ background: '#f0f9ff', border: '1px solid #bae6fd' }}>
+  <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
+    style={{ background: 'linear-gradient(135deg, #0ea5e9, #0077b6)' }}>
+    <MapPin size={24} color="white" />
+  </div>
+  <div>
+    <div className="font-semibold text-ocean-dark dark:text-aqua-100">Service Areas</div>
+    <div className="text-ocean-base dark:text-aqua-300 text-sm mt-0.5">Delhi &amp; Noida</div>
+    <div className="text-ocean-base/55 dark:text-aqua-300/55 text-xs mt-1">Home visits available across both cities</div>
+  </div>
+</div>
+           <div className="flex items-center gap-5 p-6 rounded-2xl dark:bg-[#111827] dark:border-[#1e3a5f]"
+  style={{ background: '#f0f9ff', border: '1px solid #bae6fd' }}>
+  <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
+    style={{ background: 'linear-gradient(135deg, #0ea5e9, #0077b6)' }}>
+    <Mail size={24} color="white" />
+  </div>
+  <div>
+    <div className="font-semibold text-ocean-dark dark:text-aqua-100">Email</div>
+    <div className="text-ocean-base dark:text-aqua-300 text-sm mt-0.5">info@trendingaquarium.in</div>
+    <div className="text-ocean-base/55 dark:text-aqua-300/55 text-xs mt-1">We reply within 24 hours</div>
+  </div>
+</div>
           </motion.div>
 
           {/* ── Right: Enquiry Form ── */}
@@ -143,24 +142,24 @@ export default function ContactSection() {
             viewport={{ once: true }}
           >
             <form
-              onSubmit={handleSubmit}
-              className="rounded-3xl p-8"
-              style={{
-                background: 'rgba(255,255,255,0.9)',
-                backdropFilter: 'blur(12px)',
-                border: '1px solid #bae6fd',
-                boxShadow: '0 4px 32px rgba(0,119,182,0.10)',
-              }}
-            >
-              <h3 className="font-display font-bold text-2xl text-ocean-dark mb-6 flex items-center gap-2">
-                <Mail size={22} className="text-ocean-base" />
-                Send an Enquiry
-              </h3>
+  onSubmit={handleSubmit}
+  className="rounded-3xl p-8 dark:bg-[#111827] dark:border-[#1e3a5f]"
+  style={{
+    background: 'rgba(255,255,255,0.9)',
+    backdropFilter: 'blur(12px)',
+    border: '1px solid #bae6fd',
+    boxShadow: '0 4px 32px rgba(0,119,182,0.10)',
+  }}
+>
+             <h3 className="font-display font-bold text-2xl text-ocean-dark dark:text-aqua-100 mb-6 flex items-center gap-2">
+  <Mail size={22} className="text-ocean-base dark:text-aqua-300" />
+  Send an Enquiry
+</h3>
 
               <div className="space-y-4">
                 {/* Name */}
                 <div>
-                  <label className="block text-sm font-medium text-ocean-dark mb-1.5">
+                  <label className="block text-sm font-medium text-ocean-dark dark:text-aqua-100 mb-1.5">
                     Your Name <span className="text-red-400">*</span>
                   </label>
                   <input
@@ -175,7 +174,7 @@ export default function ContactSection() {
 
                 {/* Phone */}
                 <div>
-                  <label className="block text-sm font-medium text-ocean-dark mb-1.5">
+                  <label className="block text-sm font-medium text-ocean-dark dark:text-aqua-100 mb-1.5">
                     Phone Number <span className="text-red-400">*</span>
                   </label>
                   <input
@@ -192,7 +191,7 @@ export default function ContactSection() {
                 {/* City & Size row */}
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-ocean-dark mb-1.5">
+                    <label className="block text-sm font-medium text-ocean-dark dark:text-aqua-100 mb-1.5">
                       City <span className="text-red-400">*</span>
                     </label>
                     <select name="city" value={form.city} onChange={handleChange} className="form-input" required>
@@ -201,7 +200,7 @@ export default function ContactSection() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-ocean-dark mb-1.5">
+                    <label className="block text-sm font-medium text-ocean-dark dark:text-aqua-100 mb-1.5">
                       Aquarium Size
                     </label>
                     <select name="aquariumSize" value={form.aquariumSize} onChange={handleChange} className="form-input">
@@ -213,7 +212,7 @@ export default function ContactSection() {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-sm font-medium text-ocean-dark mb-1.5">
+                  <label className="block text-sm font-medium text-ocean-dark dark:text-aqua-100 mb-1.5">
                     Message <span className="text-red-400">*</span>
                   </label>
                   <textarea
@@ -245,9 +244,9 @@ export default function ContactSection() {
                   )}
                 </button>
 
-                <p className="text-center text-xs text-ocean-base/50 mt-2">
-                  Or for instant response, use <a href={`https://wa.me/${WHATSAPP}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer" className="text-green-500 font-semibold hover:underline">WhatsApp</a>
-                </p>
+               <p className="text-center text-xs text-ocean-base/50 dark:text-aqua-300/50 mt-2">
+  Or for instant response, use <a href={`https://wa.me/${WHATSAPP}?text=${WA_MSG}`} target="_blank" rel="noopener noreferrer" className="text-green-500 font-semibold hover:underline">WhatsApp</a>
+</p>
               </div>
             </form>
           </motion.div>

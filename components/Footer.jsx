@@ -126,12 +126,12 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/40 text-xs">
-            © {new Date().getFullYear()} Trending Aquarium. All rights reserved.
-          </p>
-          <p className="text-white/30 text-xs flex items-center gap-1">
-            Made with <Heart size={10} className="text-red-400 fill-red-400" /> for aquarium lovers
-          </p>
+          <p className="text-white/50 text-xs">
+  © {new Date().getFullYear()} Trending Aquarium. All rights reserved.
+</p>
+<p className="text-white/40 text-xs flex items-center gap-1">
+  Made with <Heart size={10} className="text-red-400 fill-red-400" /> for aquarium lovers
+</p>
         </div>
       </div>
     </footer>

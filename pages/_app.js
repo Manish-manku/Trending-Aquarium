@@ -2,8 +2,19 @@ import '../styles/globals.css'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { Toaster } from 'react-hot-toast'
+import { useEffect } from 'react'
 
 export default function App({ Component, pageProps }) {
+
+  useEffect(() => {
+    const saved = localStorage.getItem('theme')
+    if (saved === 'dark') {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [])
+
   return (
     <>
       <Component {...pageProps} />

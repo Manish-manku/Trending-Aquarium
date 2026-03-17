@@ -37,17 +37,17 @@ export default function TestimonialsSection() {
   }
 
   return (
-    <section id="testimonials" className="section-padding" style={{ background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)' }}>
+    <section id="testimonials" className="section-padding" style={{ background: 'var(--bg-section)' }}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="section-tag">Happy Customers</span>
-          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ocean-dark mb-4">
-            What People <span className="gradient-text">Say</span>
-          </h2>
-          <p className="text-ocean-base/70 max-w-md mx-auto">
-            Real reviews from our happy customers in Delhi &amp; gurgaon.
-          </p>
+          <span className="section-tag dark:bg-[#1e3a5f] dark:text-aqua-300 dark:border-[#1e3a5f]">Happy Customers</span>
+          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ocean-dark dark:text-aqua-100 mb-4">
+  What People <span className="gradient-text">Say</span>
+</h2>
+         <p className="text-ocean-base/70 dark:text-aqua-300/80 max-w-md mx-auto">
+  Real reviews from our happy customers in Delhi &amp; Noida.
+</p>
         </div>
 
         {/* Carousel */}
@@ -60,21 +60,21 @@ export default function TestimonialsSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -4 }}
-                  className="rounded-2xl p-6 h-full transition-all duration-300"
-                  style={{
-                    background: 'rgba(255,255,255,0.85)',
-                    backdropFilter: 'blur(10px)',
-                    border: '1px solid rgba(144,224,239,0.4)',
-                    boxShadow: '0 2px 20px rgba(0,119,182,0.08)',
-                    minHeight: '200px',
-                  }}
+                  className="rounded-2xl p-6 h-full transition-all duration-300 dark:bg-[#111827] dark:border-[#1e3a5f]"
+style={{
+  background: 'rgba(255,255,255,0.85)',
+  backdropFilter: 'blur(10px)',
+  border: '1px solid rgba(144,224,239,0.4)',
+  boxShadow: '0 2px 20px rgba(0,119,182,0.08)',
+  minHeight: '200px',
+}}
                 >
                   <Quote size={28} className="text-aqua-200 mb-3" />
                   <StarRating rating={t.rating} />
-                  <p className="text-ocean-dark/80 text-sm leading-relaxed mb-5 italic">
-                    "{t.review}"
-                  </p>
-                  <div className="flex items-center gap-3 pt-4 border-t border-aqua-100">
+                  <p className="text-ocean-dark/80 dark:text-aqua-100/80 text-sm leading-relaxed mb-5 italic">
+  "{t.review}"
+</p>
+                  <div className="flex items-center gap-3 pt-4 border-t border-aqua-100 dark:border-[#1e3a5f]">
                     {/* Avatar */}
                     <div
                       className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
@@ -83,9 +83,8 @@ export default function TestimonialsSection() {
                       {t.name.charAt(0)}
                     </div>
                     <div>
-                      <div className="font-semibold text-ocean-dark text-sm">{t.name}</div>
-                      <div className="text-xs text-ocean-base/60">{t.city} · {t.aquariumSize} tank</div>
-                    </div>
+                      <div className="font-semibold text-ocean-dark dark:text-aqua-100 text-sm">{t.name}</div>
+<div className="text-xs text-ocean-base/60 dark:text-aqua-300/60">{t.city} · {t.aquariumSize} tank</div> </div>
                   </div>
                 </motion.div>
               </div>
@@ -96,9 +95,8 @@ export default function TestimonialsSection() {
           <div className="flex justify-center gap-3 mt-2">
             <button
               onClick={() => sliderRef.current?.slickPrev()}
-              className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:-translate-x-0.5"
-              style={{ background: '#e0f2fe', border: '1px solid #bae6fd', color: '#0077b6' }}
-            >
+              className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:-translate-x-0.5 dark:bg-[#1e3a5f] dark:border-[#2a4f7f] dark:text-aqua-300"
+style={{ background: '#e0f2fe', border: '1px solid #bae6fd', color: '#0077b6' }}>
               <ChevronLeft size={18} />
             </button>
             <button

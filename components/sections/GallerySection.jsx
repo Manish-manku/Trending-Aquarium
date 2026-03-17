@@ -19,17 +19,17 @@ const galleryImages = [
 
 export default function GallerySection() {
   return (
-    <section id="gallery" className="section-padding" style={{ background: '#f0f9ff' }}>
+    <section id="gallery" className="section-padding" style={{ background: 'var(--bg-section)' }}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="section-tag">Our Work</span>
-          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ocean-dark mb-4">
-            Portfolio <span className="gradient-text">Gallery</span>
-          </h2>
-          <p className="text-ocean-base/70 max-w-lg mx-auto">
-            Real aquariums we have set up and maintain for homes and offices across Delhi &amp; gurgaon.
-          </p>
+          <span className="section-tag dark:bg-[#1e3a5f] dark:text-aqua-300 dark:border-[#1e3a5f]">Our Work</span>
+          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ocean-dark dark:text-aqua-100 mb-4">
+  Portfolio <span className="gradient-text">Gallery</span>
+</h2>
+          <p className="text-ocean-base/70 dark:text-aqua-300/80 max-w-lg mx-auto">
+  Real aquariums we have set up and maintain for homes and offices across Delhi &amp; Noida.
+</p>
         </div>
 
         {/* Masonry gallery */}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Fish, Menu, X, Phone } from 'lucide-react'
+import { Fish, Menu, X, Phone, Sun, Moon } from 'lucide-react'
 import Image from 'next/image'
 
 const navLinks = [
@@ -15,14 +15,24 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled,  setScrolled]  = useState(false)
   const [menuOpen,  setMenuOpen]  = useState(false)
-  const [activeSection, setActive] = useState('hero')
+  const [isDark, setIsDark]       = useState(false)
   const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+919354011835'
-
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  setIsDark(document.documentElement.classList.contains('dark'))
+}, [])
+
+const toggleTheme = () => {
+  const html = document.documentElement
+  if (html.classList.contains('dark')) {
+    html.classList.remove('dark')
+    localStorage.setItem('theme', 'light')
+    setIsDark(false)
+  } else {
+    html.classList.add('dark')
+    localStorage.setItem('theme', 'dark')
+    setIsDark(true)
+  }
+}
 
   return (
     <>
@@ -31,10 +41,10 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
-          scrolled
-            ? 'bg-white/90 backdrop-blur-md shadow-aqua-sm py-3'
-            : 'bg-transparent py-5'
-        }`}
+  scrolled
+    ? 'bg-white/90 dark:bg-[#0a0f1e]/95 backdrop-blur-md shadow-aqua-sm py-3'
+    : 'bg-transparent py-5'
+}`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
 
@@ -60,10 +70,10 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
-                    scrolled
-                      ? 'text-ocean-dark hover:bg-aqua-100 hover:text-ocean-deep'
-                      : 'text-white/90 hover:text-white hover:bg-white/15'
-                  }`}
+  scrolled
+    ? 'text-ocean-dark dark:text-aqua-100 hover:bg-aqua-100 dark:hover:bg-[#1e3a5f] hover:text-ocean-deep'
+    : 'text-white/90 hover:text-white hover:bg-white/15'
+}`}
                 >
                   {link.label}
                 </a>
@@ -73,11 +83,21 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
+            {/* Theme toggle */}
+  <button
+    onClick={toggleTheme}
+    className={`w-9 h-9 rounded-full flex items-center justify-center transition-all duration-300 ${
+      scrolled
+        ? 'bg-aqua-100 text-ocean-deep hover:bg-aqua-200'
+        : 'bg-white/15 text-white hover:bg-white/25'
+    }`}>
+    {isDark ? <Sun size={16} /> : <Moon size={16} />}</button>
+
             <a
               href={`tel:+${whatsapp}`}
               className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                scrolled ? 'text-ocean-deep' : 'text-white/90'
-              }`}
+  scrolled ? 'text-ocean-deep dark:text-aqua-300' : 'text-white/90'
+}`}
             >
               <Phone size={15} />
               Call Us
@@ -97,8 +117,8 @@ export default function Navbar() {
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className={`lg:hidden p-2 rounded-xl transition-colors ${
-              scrolled ? 'text-ocean-dark hover:bg-aqua-100' : 'text-white hover:bg-white/15'
-            }`}
+  scrolled ? 'text-ocean-dark dark:text-aqua-100 hover:bg-aqua-100 dark:hover:bg-[#1e3a5f]' : 'text-white hover:bg-white/15'
+}`}
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -112,7 +132,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed top-16 left-4 right-4 z-40 bg-white rounded-2xl shadow-aqua-lg p-5 lg:hidden"
+            className="fixed top-16 left-4 right-4 z-40 bg-white dark:bg-[#111827] dark:border dark:border-[#1e3a5f] rounded-2xl shadow-aqua-lg p-5 lg:hidden"
           >
             <ul className="flex flex-col gap-1 mb-4">
               {navLinks.map(link => (
@@ -120,13 +140,24 @@ export default function Navbar() {
                   <a
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="block px-4 py-3 rounded-xl text-ocean-dark font-medium hover:bg-aqua-50 transition-colors"
+                    className="block px-4 py-3 rounded-xl text-ocean-dark dark:text-aqua-100 font-medium hover:bg-aqua-50 dark:hover:bg-[#1e3a5f] transition-colors"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
+            <div className="flex items-center justify-between px-4 py-3">
+  <span className="text-ocean-dark font-medium text-sm">
+    {isDark ? 'Switch to Light' : 'Switch to Dark'}
+  </span>
+  <button
+    onClick={toggleTheme}
+    className="w-9 h-9 rounded-full bg-aqua-100 flex items-center justify-center text-ocean-deep"
+  >
+    {isDark ? <Sun size={16} /> : <Moon size={16} />}
+  </button>
+</div>
             <a
               href={`https://wa.me/${whatsapp}?text=Hello%2C%20I%20saw%20your%20website%20and%20I%20want%20to%20know%20more%20about%20your%20aquarium%20products%20and%20services.`}
               target="_blank"

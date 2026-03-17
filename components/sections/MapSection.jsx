@@ -13,30 +13,30 @@ const serviceAreas = [
 
 export default function MapSection() {
   return (
-    <section id="map" className="section-padding" style={{ background: '#f0f9ff' }}>
+    <section id="map" className="section-padding" style={{ background: 'var(--bg-section)' }}>
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="section-tag">Where We Serve</span>
-          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ocean-dark mb-4">
-            Our <span className="gradient-text">Service Areas</span>
-          </h2>
-          <p className="text-ocean-base/70 max-w-lg mx-auto">
-            We provide aquarium services across Delhi &amp; gurgaon. Home visits and on-site maintenance available.
-          </p>
+          <span className="section-tag dark:bg-[#1e3a5f] dark:text-aqua-300 dark:border-[#1e3a5f]">Where We Serve</span>
+          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ocean-dark dark:text-aqua-100 mb-4">
+  Our <span className="gradient-text">Service Areas</span>
+</h2>
+         <p className="text-ocean-base/70 dark:text-aqua-300/80 max-w-lg mx-auto">
+  We provide aquarium services across Delhi &amp; Noida. Home visits and on-site maintenance available.
+</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
 
           {/* Map embed */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="lg:col-span-2 rounded-3xl overflow-hidden shadow-aqua-md"
-            style={{ border: '2px solid #bae6fd', minHeight: '400px' }}
-          >
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="lg:col-span-2 rounded-3xl overflow-hidden shadow-aqua-md dark:border-[#1e3a5f]"
+  style={{ border: '2px solid #bae6fd', minHeight: '400px' }}
+>
             {/* 
               IMPORTANT: Replace the src URL below with your actual Google Maps embed URL.
               Steps:
@@ -66,22 +66,23 @@ export default function MapSection() {
             className="flex flex-col gap-5"
           >
             {serviceAreas.map((area) => (
-              <div
-                key={area.city}
-                className="rounded-2xl p-6"
-                style={{
-                  background: 'rgba(255,255,255,0.9)',
-                  border: '1px solid #bae6fd',
-                  boxShadow: '0 2px 16px rgba(0,119,182,0.07)',
-                }}
-              >
+             <div
+  key={area.city}
+  className="rounded-2xl p-6 dark:bg-[#111827] dark:border-[#1e3a5f]"
+  style={{
+    background: 'rgba(255,255,255,0.9)',
+    border: '1px solid #bae6fd',
+    boxShadow: '0 2px 16px rgba(0,119,182,0.07)',
+  }}
+>
+              
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-2xl">{area.icon}</span>
-                  <h3 className="font-display font-bold text-xl text-ocean-dark">{area.city}</h3>
+                  <h3 className="font-display font-bold text-xl text-ocean-dark dark:text-aqua-100">{area.city}</h3>
                 </div>
                 <div className="flex items-start gap-2">
                   <MapPin size={14} className="text-ocean-base mt-0.5 flex-shrink-0" />
-                  <p className="text-ocean-base/70 text-sm leading-relaxed">{area.areas}</p>
+                  <p className="text-ocean-base/70 dark:text-aqua-300/70 text-sm leading-relaxed">{area.areas}</p>
                 </div>
               </div>
             ))}

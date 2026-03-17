@@ -13,6 +13,27 @@
   --white:        #ffffff;
   --text-primary: #0c2340;
   --text-muted:   #4a7fa5;
+
+  --bg-primary:   #f8fdff;
+  --bg-section:   #f0f9ff;
+  --bg-card:      #ffffff;
+  --border-color: #bae6fd;
+}
+
+.dark {
+  --ocean-light:  #0c2340;
+  --ocean-mid:    #0a3a5c;
+  --ocean-base:   #38bdf8;
+  --ocean-deep:   #7dd3fc;
+  --ocean-dark:   #e0f2fe;
+  --white:        #0f172a;
+  --text-primary: #e0f2fe;
+  --text-muted:   #7dd3fc;
+
+  --bg-primary:   #0a0f1e;
+  --bg-section:   #0d1526;
+  --bg-card:      #111827;
+  --border-color: #1e3a5f;
 }
 
 * {
@@ -28,13 +49,14 @@ html {
 body {
   font-family: 'DM Sans', sans-serif;
   color: var(--text-primary);
-  background: #f8fdff;
+  background: var(--bg-primary);
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ── Scrollbar ─────────────────────────── */
 ::-webkit-scrollbar             { width: 6px; }
-::-webkit-scrollbar-track       { background: #e0f2fe; }
+::-webkit-scrollbar-track       { background: var(--bg-section); }
 ::-webkit-scrollbar-thumb       { background: var(--ocean-base); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--ocean-deep); }
 
@@ -110,10 +132,20 @@ body {
   @apply w-full px-4 py-3 rounded-xl border outline-none transition-all duration-200;
   border-color: #bae6fd;
   background: rgba(255,255,255,0.9);
+  color: var(--text-primary);
 }
 .form-input:focus {
   border-color: var(--ocean-base);
   box-shadow: 0 0 0 3px rgba(0,180,216,0.15);
+}
+.dark .form-input {
+  background: #0d1526;
+  border-color: #1e3a5f;
+  color: #e0f2fe;
+}
+.dark .form-input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56,189,248,0.15);
 }
 
 /* ── Masonry gallery ────────────────────── */

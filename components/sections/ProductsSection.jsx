@@ -31,18 +31,18 @@ const brands = [
 
 export default function ProductsSection() {
   return (
-    <section id="products" className="section-padding bg-white">
+    <section id="products" className="section-padding bg-white dark:bg-[#0a0f1e]">
       <div className="max-w-7xl mx-auto">
 
         {/* ── Fish Types ──────────────────────── */}
         <div className="text-center mb-12">
-          <span className="section-tag">What We Keep</span>
-          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ocean-dark mb-4">
-            Fish &amp; <span className="gradient-text">Plants</span>
-          </h2>
-          <p className="text-ocean-base/70 max-w-lg mx-auto">
-            We work with a wide variety of freshwater and marine species — carefully selected for health and compatibility.
-          </p>
+          <span className="section-tag dark:bg-[#1e3a5f] dark:text-aqua-300 dark:border-[#1e3a5f]">What We Keep</span>
+          <h2 className="font-display font-bold text-4xl sm:text-5xl text-ocean-dark dark:text-aqua-100 mb-4">
+  Fish &amp; <span className="gradient-text">Plants</span>
+</h2>
+         <p className="text-ocean-base/70 dark:text-aqua-300/80 max-w-lg mx-auto">
+  We work with a wide variety of freshwater and marine species — carefully selected for health and compatibility.
+</p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
@@ -54,25 +54,25 @@ export default function ProductsSection() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.07 }}
               whileHover={{ y: -5 }}
-              className="rounded-2xl p-5 text-center cursor-default transition-all duration-300"
-              style={{
-                background: `${fish.color}12`,
-                border: `1px solid ${fish.color}35`,
-                boxShadow: `0 2px 12px ${fish.color}15`,
-              }}
+              className="rounded-2xl p-5 text-center cursor-default transition-all duration-300 dark:bg-[#111827] dark:border-[#1e3a5f]"
+style={{
+  background: `${fish.color}12`,
+  border: `1px solid ${fish.color}35`,
+  boxShadow: `0 2px 12px ${fish.color}15`,
+}}
             >
               <div className="text-3xl mb-2">{fish.emoji}</div>
-              <div className="font-semibold text-ocean-dark text-sm">{fish.name}</div>
-              <div className="text-xs text-ocean-base/60 mt-0.5">{fish.desc}</div>
-            </motion.div>
+              <div className="font-semibold text-ocean-dark dark:text-aqua-100 text-sm">{fish.name}</div>
+<div className="text-xs text-ocean-base/60 dark:text-aqua-300/60 mt-0.5">{fish.desc}</div>
+        </motion.div>
           ))}
         </div>
 
         {/* ── Plants ──────────────────────────── */}
         <div className="mb-16">
-          <h3 className="font-display font-semibold text-2xl text-ocean-dark mb-6 text-center">
-            🌿 Aquarium Plants &amp; Decoratives
-          </h3>
+          <h3 className="font-display font-semibold text-2xl text-ocean-dark dark:text-aqua-100 mb-6 text-center">
+  🌿 Aquarium Plants
+</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {plants.map((plant, i) => (
               <motion.span
@@ -81,9 +81,8 @@ export default function ProductsSection() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium text-ocean-deep"
-                style={{ background: '#e0f2fe', border: '1px solid #bae6fd' }}
-              >
+               className="flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium text-ocean-deep dark:text-aqua-300 dark:border-[#1e3a5f]"
+style={{ background: '#e0f2fe', border: '1px solid #bae6fd' }} >
                 {plant.emoji} {plant.name}
               </motion.span>
             ))}
@@ -93,11 +92,10 @@ export default function ProductsSection() {
         {/* ── Trusted Brands ──────────────────── */}
         <div>
           <div className="text-center mb-8">
-            <h3 className="font-display font-semibold text-2xl text-ocean-dark mb-2">
-              🏷️ Trusted Brands We Use
-            </h3>
-            <p className="text-ocean-base/60 text-sm">Only quality-certified products for your aquarium</p>
-          </div>
+            <h3 className="font-display font-semibold text-2xl text-ocean-dark dark:text-aqua-100 mb-2">
+  🏷️ Trusted Brands We Use
+</h3>
+<p className="text-ocean-base/60 dark:text-aqua-300/60 text-sm">Only quality-certified products for your aquarium</p>  </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {brands.map((brand, i) => (
               <motion.div
@@ -107,12 +105,12 @@ export default function ProductsSection() {
   viewport={{ once: true }}
   transition={{ delay: i * 0.08 }}
   whileHover={{ y: -4, boxShadow: '0 8px 24px rgba(0,119,182,0.20)' }}
-  className="rounded-2xl p-5 text-center transition-all duration-300"
-  style={{
-    background: 'rgba(255,255,255,0.95)',
-    border: '1.5px solid #bae6fd',
-    boxShadow: '0 2px 12px rgba(0,119,182,0.10)',
-  }}
+  className="rounded-2xl p-5 text-center transition-all duration-300 dark:bg-[#111827] dark:border-[#1e3a5f]"
+style={{
+  background: 'rgba(255,255,255,0.95)',
+  border: '1.5px solid #bae6fd',
+  boxShadow: '0 2px 12px rgba(0,119,182,0.10)',
+}}
 >
   <div className="w-24 h-24 mx-auto mb-3 flex items-center justify-center">
     <img
@@ -121,7 +119,7 @@ export default function ProductsSection() {
       className="w-full h-full object-contain scale-150"
     />
   </div>
-  <div className="font-bold text-ocean-dark text-sm">{brand.name}</div>
+  <div className="font-bold text-ocean-dark dark:text-aqua-100 text-sm">{brand.name}</div>
 </motion.div>
             ))}
           </div>
