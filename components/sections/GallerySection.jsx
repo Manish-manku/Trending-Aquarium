@@ -15,7 +15,7 @@ const galleryImages = [
   { src: '/images/fish/fish2.jpeg', alt: 'Flowerhorn cichlid' },
   { src: '/images/fish/fish8.jpeg', alt: 'Oscar' },
   { src: '/images/fish/fish7.jpeg', alt: 'Bule peacock cichlid' },
-  { src: '/images/fish/fish3.jpeg', alt: 'Cichlid' },
+  { src: '/images/fish/fish3.jpeg', alt: 'Discus fish' },
 ]
 
 export default function GallerySection() {
