@@ -15,7 +15,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled,  setScrolled]  = useState(false)
   const [menuOpen,  setMenuOpen]  = useState(false)
-  const [isDark, setIsDark]       = useState(false)
+  const [isDark, setIsDark]       = useState(true)
   const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+919354011835'
   useEffect(() => {
   setIsDark(document.documentElement.classList.contains('dark'))
@@ -153,7 +153,7 @@ const toggleTheme = () => {
               ))}
             </ul>
             <div className="flex items-center justify-between px-4 py-3">
-  <span className="text-ocean-dark font-medium text-sm">
+  <span className="text-ocean-dark dark:text-aqua-100 font-medium text-sm">
     {isDark ? 'Switch to Light' : 'Switch to Dark'}
   </span>
   <button

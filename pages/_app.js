@@ -7,14 +7,14 @@ import { useEffect } from 'react'
 export default function App({ Component, pageProps }) {
 
   useEffect(() => {
-    const saved = localStorage.getItem('theme')
-    if (saved === 'dark') {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }, [])
-
+  const saved = localStorage.getItem('theme')
+  if (saved === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+    localStorage.setItem('theme', 'dark')
+  }
+}, [])
   return (
     <>
       <Component {...pageProps} />
