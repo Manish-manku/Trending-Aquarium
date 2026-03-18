@@ -263,7 +263,7 @@ export default function HeroSection() {
             { num: '500+', label: 'Aquariums Serviced' },
             { num: '4.2★',  label: 'Customer Rating' },
             { num: '8+',  label: 'Years Experience' },
-            { num: '2',   label: 'Cities Covered' },
+            { num: '3',   label: 'Cities Covered' },
           ].map(s => (
             <div key={s.label} className="text-center">
               <div className="font-display font-bold text-2xl text-white">{s.num}</div>

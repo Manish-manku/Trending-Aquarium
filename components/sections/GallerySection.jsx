@@ -15,6 +15,7 @@ const galleryImages = [
   { src: '/images/fish/fish2.jpeg', alt: 'Flowerhorn cichlid' },
   { src: '/images/fish/fish8.jpeg', alt: 'Oscar' },
   { src: '/images/fish/fish7.jpeg', alt: 'Bule peacock cichlid' },
+  { src: '/images/fish/fish3.jpeg', alt: 'Cichlid' },
 ]
 
 export default function GallerySection() {
@@ -28,7 +29,7 @@ export default function GallerySection() {
   Portfolio <span className="gradient-text">Gallery</span>
 </h2>
           <p className="text-ocean-base/70 dark:text-aqua-300/80 max-w-lg mx-auto">
-  Real aquariums we have set up and maintain for homes and offices across Delhi &amp; Noida.
+  Real aquariums we have set up and maintain for homes and offices across Delhi &amp; Gurgaon.
 </p>
         </div>
 

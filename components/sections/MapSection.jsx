@@ -7,7 +7,7 @@ const MAPS_EMBED_URL =
   'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.48957787568!2d77.06889754725782!3d28.52728034196053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin'
 
 const serviceAreas = [
-  { city: 'Delhi', areas: 'South Delhi, West Delhi, North Delhi, East Delhi, Central Delhi', icon: '🏙️' },
+  { city: 'Delhi and Delhi NCR', areas: 'South Delhi, West Delhi, North Delhi, East Delhi, Central Delhi, Noida, Greater Noida', icon: '🏙️' },
   { city: 'gurgaon', areas: 'DLF City, MG Road,New Gurgaon, Sohna Road, Sector 49.',          icon: '🌆' },
 ]
 
@@ -23,7 +23,7 @@ export default function MapSection() {
   Our <span className="gradient-text">Service Areas</span>
 </h2>
          <p className="text-ocean-base/70 dark:text-aqua-300/80 max-w-lg mx-auto">
-  We provide aquarium services across Delhi &amp; Noida. Home visits and on-site maintenance available.
+  We provide aquarium services across Delhi &amp; Gurgaon. Home visits and on-site maintenance available.
 </p>
         </div>
 

@@ -104,7 +104,7 @@ export default function ContactSection() {
   </div>
   <div>
     <div className="font-semibold text-ocean-dark dark:text-aqua-100">Phone</div>
-    <div className="text-ocean-base dark:text-aqua-300 text-sm mt-0.5">+91-99999-99999</div>
+    <div className="text-ocean-base dark:text-aqua-300 text-sm mt-0.5">+91-93540-11835</div>
     <div className="text-ocean-base/55 dark:text-aqua-300/55 text-xs mt-1">Mon – Sat · 9 AM – 7 PM</div>
   </div>
 </div>
@@ -117,7 +117,7 @@ export default function ContactSection() {
   </div>
   <div>
     <div className="font-semibold text-ocean-dark dark:text-aqua-100">Service Areas</div>
-    <div className="text-ocean-base dark:text-aqua-300 text-sm mt-0.5">Delhi &amp; Noida</div>
+    <div className="text-ocean-base dark:text-aqua-300 text-sm mt-0.5">Delhi &amp; Gurgaon</div>
     <div className="text-ocean-base/55 dark:text-aqua-300/55 text-xs mt-1">Home visits available across both cities</div>
   </div>
 </div>
@@ -129,7 +129,7 @@ export default function ContactSection() {
   </div>
   <div>
     <div className="font-semibold text-ocean-dark dark:text-aqua-100">Email</div>
-    <div className="text-ocean-base dark:text-aqua-300 text-sm mt-0.5">info@trendingaquarium.in</div>
+    <div className="text-ocean-base dark:text-aqua-300 text-sm mt-0.5">kamalrajoriya25@gmail.com</div>
     <div className="text-ocean-base/55 dark:text-aqua-300/55 text-xs mt-1">We reply within 24 hours</div>
   </div>
 </div>
