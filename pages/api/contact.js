@@ -78,7 +78,7 @@ const escape = (str) => String(str)
     const ownerEmail = process.env.OWNER_EMAIL
     if (ownerEmail && process.env.RESEND_API_KEY) {
       await resend.emails.send({
-        from:    'Trending Aquarium <onboarding@resend.dev>',
+        from: 'Trending Aquarium <info@trendingaquarium.com>',
         to:      ownerEmail,
         subject: `New Enquiry from ${name} — ${city}`,
         html: `
