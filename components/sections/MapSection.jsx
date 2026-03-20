@@ -4,8 +4,9 @@ import { MapPin, Clock, Phone } from 'lucide-react'
 // ── Replace this embed URL with your actual Google Maps embed URL ──
 // Go to: maps.google.com → Search your location → Share → Embed a map → Copy iframe src
 const MAPS_EMBED_URL =
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.076548039407!2d77.23840321013186!3d28.507344575632093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1c1119807ed%3A0x9af77764da161759!2sTrending%20Aquarium!5e0!3m2!1sen!2sin!4v1773933264737!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-const serviceAreas = [
+  process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY ||
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.076548039407!2d77.23840321013186!3d28.507344575632093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1c1119807ed%3A0x9af77764da161759!2sTrending%20Aquarium!5e0!3m2!1sen!2sin!4v1773933264737!5m2!1sen!2sin'
+  const serviceAreas = [
   { city: 'Delhi and Delhi NCR', areas: 'South Delhi, West Delhi, North Delhi, East Delhi, Central Delhi, Noida, Greater Noida', icon: '🏙️' },
   { city: 'gurgaon', areas: 'DLF City, MG Road,New Gurgaon, Sohna Road, Sector 49.',          icon: '🌆' },
 ]
@@ -26,7 +27,7 @@ export default function MapSection() {
 </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8"> 
 
           {/* Map embed */}
           <motion.div
