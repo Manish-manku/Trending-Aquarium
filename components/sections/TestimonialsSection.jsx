@@ -95,12 +95,15 @@ style={{
           <div className="flex justify-center gap-3 mt-2">
             <button
               onClick={() => sliderRef.current?.slickPrev()}
-              className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:-translate-x-0.5 dark:bg-[#1e3a5f] dark:border-[#2a4f7f] dark:text-aqua-300"
-style={{ background: '#e0f2fe', border: '1px solid #bae6fd', color: '#0077b6' }}>
+              aria-label="Previous testimonial"
+              className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:-translate-x-0.5"
+              style={{ background: '#e0f2fe', border: '1px solid #bae6fd', color: '#0077b6' }}
+            >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={() => sliderRef.current?.slickNext()}
+              aria-label="Next testimonial"
               className="w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:translate-x-0.5"
               style={{ background: 'linear-gradient(135deg, #00b4d8, #0077b6)', color: '#fff' }}
             >
