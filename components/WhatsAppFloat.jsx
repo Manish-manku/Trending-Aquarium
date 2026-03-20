@@ -50,8 +50,10 @@ export default function WhatsAppFloat() {
             {/* WhatsApp button — on top */}
             
           <a
-              rel="noopener noreferrer"
-              onMouseEnter={() => setTooltip(true)}
+             href={`https://wa.me/${WHATSAPP}?text=${WA_MSG}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  onMouseEnter={() => setTooltip(true)}
               onMouseLeave={() => setTooltip(false)}
               className="absolute inset-0 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 active:scale-95 z-10"
               style={{ background: '#25d366', boxShadow: '0 4px 20px rgba(37,211,102,0.45)' }}
