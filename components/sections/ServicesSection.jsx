@@ -58,7 +58,7 @@ export default function ServicesSection() {
         {/* Header */}
         <div className="text-center mb-14">
           <span className="section-tag dark:bg-[#1e3a5f] dark:text-aqua-300 dark:border-[#1e3a5f]">What We Do</span>
-         <h2 className="font-display font-bold text-4xl sm:text-5xl mb-4" style={{ color: '#03045e' }}>
+         <h2 className="font-display font-bold text-4xl sm:text-5xl text-ocean-dark dark:text-aqua-100 mb-4">
   Our <span className="gradient-text">Services</span>
 </h2>
           <p className="text-ocean-base/70 dark:text-aqua-300/80 max-w-xl mx-auto text-lg">

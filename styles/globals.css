@@ -160,11 +160,3 @@ body {
 @media (max-width: 768px) { .masonry-grid { column-count: 2; } }
 @media (max-width: 480px) { .masonry-grid { column-count: 1; } }
 
-/* Add at bottom of globals.css */
-#services h2,
-#services h3 {
-  color: #03045e !important;
-}
-#services p {
-  color: #0369a1 !important;
-}
