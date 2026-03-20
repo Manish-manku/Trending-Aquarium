@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '+91-93540-11835'
+const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER 
 const WA_MSG   = encodeURIComponent('Hello, I saw your website and I want to know more about your aquarium services.')
 
 export default function WhatsAppFloat() {
