@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Fish, Menu, X, Phone, Sun, Moon } from 'lucide-react'
-import Image from 'next/image'
+
 
 const navLinks = [
   { label: 'Home',      href: '#hero' },
